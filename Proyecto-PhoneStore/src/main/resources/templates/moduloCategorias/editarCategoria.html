@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../../css/miLogin.css" rel="stylesheet" type="text/css" />
+<link href="../../css/miLayout.css" rel="stylesheet" type="text/css" />
+<link href="../../css/font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+<title>Crear Nuevo Curso</title>
+</head>
+<body>
+  <style>
+    a{
+    	margin: 0 0 0 100px;
+    }
+ 
+    </style>
+      <div class="barra-navegacion">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+            <div class="container-fluid ">
+            <a class="navbar-brand" href="#" _msthash="1864226" _msttexthash="381446" style="font-size: 30px;">    IDAT</a>
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/categorias/listarTodo}" >Categorias <i class="fas fa-graduation-cap"></i></a>
+                    <li class="nav-item">
+                         <a class="nav-link " th:href="@{/productos/listarTodo}">Productos <i class="fas fa-user-graduate"></i>     </a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" th:href="@{/verPerfil}">Perfil <i class="fas fa-user-alt"></i>     </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/logout}">Salir <i class="fas fa-door-open"></i>        </a>
+                     </li>
+                    <form class="form-inline my-2 my-lg-0">
+                    	<input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+                </ul>
+               
+            </div>
+        </nav>
+        </div>
+
+	<section id="seccion1">
+	<div style="width:80%;margin:0 auto;"><br>
+			<p>Datos de la Nueva Categoria</p>
+			<form th:action="@{/categorias/guardar}"
+				th:object="${categoria}" method="post">
+
+				<div class="form-group row">
+					<label for="id" class="col-sm-2 col-form-label">ID Categoria:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="id_categoria"
+							 th:field="*{id_categoria}" readonly="readonly" />
+					</div>
+				</div>
+
+
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-form-label">Nombre de la Categoria:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="Nombre"
+							placeholder="Nombre de la Categoria" th:field="*{Nombre}" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-form-label">Estado de la  Categoria:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="Estado"
+							placeholder="Estado de la Categoria" th:field="*{Estado}" />
+					</div>
+				</div>
+
+
+
+				<div align="center">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div><br>
+
+
+			</form>
+			</div>
+	</section>
+
+<script src="https://kit.fontawesome.com/a341c0ef02.js" crossorigin="anonymous"></script>
+</body>
+	
+</html>

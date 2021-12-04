@@ -1,0 +1,818 @@
+{
+	"info": {
+		"_postman_id": "2e5d1b93-41da-46fc-94be-1f49f707dd7d",
+		"name": "PhoneStoreApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Listar Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"nombre\": \"Informes\",\r\n        \"estado\": \"ACTIVO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id_categoria\": 1,\r\n        \"nombre\": \"Musica\",\r\n        \"estado\": \"ACTIVO\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/categoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categoria/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "Listar Producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"categoria\": {\r\n            \"id_categoria\": 3,\r\n            \"estado\": \"ACTIVO\",\r\n            \"nombre\": \"Telefono\"\r\n        },\r\n        \"listaDetallePedido\": [],\r\n        \"listaCarrito\": [],\r\n        \"url_imagen\": \"imagen.jpg\",\r\n        \"stock\": 10,\r\n        \"precio_Compra\": 233.0,\r\n        \"fecha_Ingreso\": \"1942-01-01T05:00:01.000+00:00\",\r\n        \"estado\": \"Activo\",\r\n        \"nombre\": \"Iphone\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualzar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_producto\": 2,\r\n        \"categoria\": {\r\n            \"id_categoria\": 2,\r\n            \"estado\": \"ACTIVO\",\r\n            \"nombre\": \"Sonido\"\r\n        },\r\n        \"listaDetallePedido\": [],\r\n        \"listaCarrito\": [],\r\n        \"estado\": \"Activo\",\r\n        \"nombre\": \"Audifonos\",\r\n        \"stock\": 10,\r\n        \"precio_Compra\": 233.0,\r\n        \"url_imagen\": \"imagen.png\",\r\n        \"fecha_Ingreso\": \"1982-01-01T05:00:01.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminiar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/producto/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"producto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Listar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"listaCliente\": [],\r\n        \"listaAdministrador\": [],\r\n        \"nombres\": \"Monica\",\r\n        \"direccion\": \"lima\",\r\n        \"dni\": 1253452,\r\n        \"clave\": \"523656\",\r\n        \"activo\": 1,\r\n        \"apellidos\": \"sanchez\",\r\n        \"celular\": \"987355756\",\r\n        \"name\": \"Moni\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_usuario\": 1,\r\n        \"listaCliente\": [],\r\n        \"listaAdministrador\": [],\r\n        \"nombres\": \"Jonathan\",\r\n        \"direccion\": \"lima\",\r\n        \"dni\": 1234567,\r\n        \"clave\": \"123456\",\r\n        \"activo\": 1,\r\n        \"apellidos\": \"ortiz\",\r\n        \"celular\": \"985362001\",\r\n        \"name\": \"J\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrito",
+			"item": [
+				{
+					"name": "listarCarrito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"categoria\": {\r\n                \"id_categoria\": 3,\r\n                \"estado\": \"Activo\",\r\n                \"nombre\": \"Telefono\"\r\n            },\r\n            \"listaDetallePedido\": [],\r\n            \"precio_Compra\": 233.0,\r\n            \"stock\": 10,\r\n            \"estado\": \"Activo\",\r\n            \"nombre\": \"Iphone\",\r\n            \"fecha_Ingreso\": \"1942-01-01T05:00:01.000+00:00\",\r\n            \"url_imagen\": \"imagen.jpg\"\r\n        },\r\n        \"usuario\": {\r\n            \"id_usuario\": 3,\r\n            \"listaCliente\": [],\r\n            \"listaAdministrador\": [],\r\n            \"name\": \"Shi\",\r\n            \"apellidos\": \"sedano\",\r\n            \"clave\": \"123656\",\r\n            \"nombres\": \"Shirley\",\r\n            \"dni\": 1234432,\r\n            \"activo\": 1,\r\n            \"celular\": \"987354621\",\r\n            \"direccion\": \"lima\"\r\n        },\r\n        \"cantidad\": 15\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualziar Carrito",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_carrito\": 2,\r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"categoria\": {\r\n                \"id_categoria\": 3,\r\n                \"estado\": \"Activo\",\r\n                \"nombre\": \"Telefono\"\r\n            },\r\n            \"listaDetallePedido\": [],\r\n            \"precio_Compra\": 233.0,\r\n            \"stock\": 10,\r\n            \"estado\": \"Activo\",\r\n            \"nombre\": \"Iphone\",\r\n            \"fecha_Ingreso\": \"1942-01-01T05:00:01.000+00:00\",\r\n            \"url_imagen\": \"imagen.jpg\"\r\n        },\r\n        \"usuario\": {\r\n            \"id_usuario\": 3,\r\n            \"listaCliente\": [],\r\n            \"listaAdministrador\": [],\r\n            \"name\": \"Moni\",\r\n            \"apellidos\": \"sanchez\",\r\n            \"clave\": \"523656\",\r\n            \"nombres\": \"Monica\",\r\n            \"dni\": 1253452,\r\n            \"activo\": 1,\r\n            \"celular\": \"987355756\",\r\n            \"direccion\": \"lima\"\r\n        },\r\n        \"cantidad\": 20\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar Carrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carrito/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carrito",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Listar Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"usuario\": {\r\n            \"id_usuario\": 2,\r\n            \"listaAdministrador\": [],\r\n            \"name\": \"Moni\",\r\n            \"activo\": 1,\r\n            \"direccion\": \"lima\",\r\n            \"celular\": \"987355756\",\r\n            \"clave\": \"523656\",\r\n            \"dni\": 1253452,\r\n            \"nombres\": \"Monica\",\r\n            \"apellidos\": \"sanchez\"\r\n        },\r\n        \"activo\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualziar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \"id_cliente\": 1,\r\n        \"usuario\": {\r\n            \"id_usuario\": 3,\r\n            \"listaAdministrador\": [],\r\n            \"name\": \"Moni\",\r\n            \"activo\": 1,\r\n            \"direccion\": \"lima\",\r\n            \"celular\": \"987355756\",\r\n            \"clave\": \"523656\",\r\n            \"dni\": 1253452,\r\n            \"nombres\": \"Monica\",\r\n            \"apellidos\": \"sanchez\"\r\n        },\r\n        \"activo\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administrador",
+			"item": [
+				{
+					"name": "Listar Administrador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/administrador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Administrador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \r\n        \"usuario\": {\r\n            \"id_usuario\": 2,\r\n            \"name\": \"Moni\",\r\n            \"celular\": \"987355756\",\r\n            \"clave\": \"523656\",\r\n            \"direccion\": \"lima\",\r\n            \"apellidos\": \"sanchez\",\r\n            \"dni\": 1253452,\r\n            \"nombres\": \"Monica\",\r\n            \"activo\": 1\r\n        },\r\n        \"activo\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Administrador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id_administrador\": 1,\r\n        \"usuario\": {\r\n            \"id_usuario\": 3,\r\n            \"name\": \"Moni\",\r\n            \"celular\": \"987355756\",\r\n            \"clave\": \"523656\",\r\n            \"direccion\": \"lima\",\r\n            \"apellidos\": \"sanchez\",\r\n            \"dni\": 1253452,\r\n            \"nombres\": \"Monica\",\r\n            \"activo\": 1\r\n        },\r\n        \"activo\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Administrador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/administrador/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listar Venta",
+			"item": [
+				{
+					"name": "Listar Venta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"fecha\": \"2000-11-05T15:23:56.000+00:00\",\r\n        \"usuario\": {\r\n            \"id_usuario\": 2,\r\n            \"name\": \"Moni\",\r\n            \"activo\": 1,\r\n            \"celular\": \"987355756\",\r\n            \"clave\": \"523656\",\r\n            \"dni\": 1253452,\r\n            \"nombres\": \"Monica\",\r\n            \"apellidos\": \"sanchez\",\r\n            \"direccion\": \"lima\"\r\n        },\r\n        \"total\": 156.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Venta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_venta\": 2,\r\n        \"fecha\": \"2021-11-05T15:23:56.000+00:00\",\r\n        \"usuario\": {\r\n            \"id_usuario\": 2,\r\n            \"name\": \"Shi\",\r\n            \"activo\": 1,\r\n            \"celular\": \"987354621\",\r\n            \"clave\": \"123656\",\r\n            \"dni\": 1234432,\r\n            \"nombres\": \"Shirley\",\r\n            \"apellidos\": \"sedano\",\r\n            \"direccion\": \"lima\"\r\n        },\r\n        \"total\": 234.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar Venta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/venta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"venta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Detalle_Venta",
+			"item": [
+				{
+					"name": "Listar Detalle_Venta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detalle_venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle_venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Detalle_venta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"categoria\": {\r\n                \"id_categoria\": 3,\r\n                \"estado\": \"Activo\",\r\n                \"nombre\": \"Telefono\"\r\n            },\r\n            \"estado\": \"Activo\",\r\n            \"nombre\": \"Iphone\",\r\n            \"fecha_Ingreso\": \"1942-01-01T05:00:01.000+00:00\",\r\n            \"url_imagen\": \"imagen.jpg\",\r\n            \"stock\": 10,\r\n            \"precio_Compra\": 233.0\r\n        },\r\n        \"venta\": {\r\n            \"id_venta\": 2,\r\n            \"fecha\": \"2021-11-05T15:23:56.000+00:00\",\r\n            \"usuario\": {\r\n                \"id_usuario\": 2,\r\n                \"name\": \"Shi\",\r\n                \"activo\": 1,\r\n                \"dni\": 1234432,\r\n                \"celular\": \"987354621\",\r\n                \"direccion\": \"lima\",\r\n                \"clave\": \"123656\",\r\n                \"nombres\": \"Shirley\",\r\n                \"apellidos\": \"sedano\"\r\n            },\r\n            \"total\": 234.0\r\n        },\r\n        \"cantidad\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/detalle_venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle_venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Detalle_Venta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id_detalle_venta\": 1,\r\n        \"producto\": {\r\n            \"id_producto\": 3,\r\n            \"categoria\": {\r\n                \"id_categoria\": 3,\r\n                \"estado\": \"Activo\",\r\n                \"nombre\": \"Telefono\"\r\n            },\r\n            \"estado\": \"Activo\",\r\n            \"nombre\": \"Iphone\",\r\n            \"fecha_Ingreso\": \"1942-01-01T05:00:01.000+00:00\",\r\n            \"url_imagen\": \"imagen.jpg\",\r\n            \"stock\": 10,\r\n            \"precio_Compra\": 233.0\r\n        },\r\n        \"venta\": {\r\n            \"id_venta\": 2,\r\n            \"fecha\": \"2021-11-05T15:23:56.000+00:00\",\r\n            \"usuario\": {\r\n                \"id_usuario\": 2,\r\n                \"name\": \"Shi\",\r\n                \"activo\": 1,\r\n                \"dni\": 1234432,\r\n                \"celular\": \"987354621\",\r\n                \"direccion\": \"lima\",\r\n                \"clave\": \"123656\",\r\n                \"nombres\": \"Shirley\",\r\n                \"apellidos\": \"sedano\"\r\n            },\r\n            \"total\": 234.0\r\n        },\r\n        \"cantidad\": 11\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/detalle_venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle_venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Detalle_Venta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detalle_venta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detalle_venta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
